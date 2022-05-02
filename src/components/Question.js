@@ -11,7 +11,7 @@ export default function Question(props){
         return (
             <button 
                 key={answer.id}
-                className={`border-2 border-clr-primary px-3 py-[2px] rounded-xl text-xs md:text-sm ${answer.styles}`}
+                className={`border-2 border-clr-primary px-3 py-[2px] rounded-xl text-xs md:text-sm ${answer.styles} hover:bg-btn-select hover:opacity-80 transition-colors`}
                 onClick={() => dispatch(selectOption({id: answer.id, questionNumber }))}
                 >{answer.option}
             </button>
