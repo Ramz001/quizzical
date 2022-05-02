@@ -2,4 +2,8 @@
 @taiwind components;
 @tailwind utilities;
 
-
+@layer utilities {
+  .main-btn {
+    @apply rounded-lg font-bold hover:opacity-75 transition-all bg-btn-primary text-white
+  }
+}

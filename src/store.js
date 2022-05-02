@@ -1,16 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
+import modalReducer from './features/modal/modalSlice';
+import quizReducer from './features/quiz/quizSlice';
 
-const initialState = {
-
-}
-
-
-const store = configureStore({
-    initialState,
-    reducer: {
-        // Add your reducers here
+export const store = configureStore({
+    reducer:{
+        modal: modalReducer,
+        quiz: quizReducer
     }
 });
 
-
-export default store
