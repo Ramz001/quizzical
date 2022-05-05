@@ -10,7 +10,7 @@ export default function Quiz(){
     const dispatch = useDispatch()
     const { data, quizChecked, correctAnswers, totalQuestionsNumber } = useSelector(state => state.quiz)
     return(
-        <div className='bg-bg-primary text-clr-primary flex flex-col justify-center items-center'>
+        <div className='h-screen bg-bg-primary text-clr-primary flex flex-col justify-center items-center'>
             <div className='flex flex-col mx-4 pt-12 pb-5'>
                 <Question id={data.id} {...data} questionNumber={0}/>
                 <Question id={data.id} {...data} questionNumber={1}/>
@@ -23,7 +23,7 @@ export default function Quiz(){
                 className='px-8 py-3 main-btn mb-9'>
                     Check answers
             </button>}
-            {quizChecked && <div className='flex items-center gap-8 justify-between mb-12 md:mb-9'>
+            {quizChecked && <div className='flex items-center gap-8 justify-between mb-10 md:mb-9'>
                     <h2 className='md:text-lg sm:text-2xl'>You scored {correctAnswers}/{totalQuestionsNumber} correct answers!</h2>
                     <button
                         className='main-btn px-3 py-1 sm:px-5 sm:py-2'
